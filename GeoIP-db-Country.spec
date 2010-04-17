@@ -2,12 +2,12 @@ Summary:	GeoLite Country - Country database for GeoIP
 Summary(pl.UTF-8):	GeoLite Country - baza danych krajów dla GeoIP
 Name:		GeoIP-db-Country
 # Updated every month:
-Version:	2010.02.02
+Version:	2010.04.02
 Release:	1
 License:	OPEN DATA LICENSE (see LICENSE.txt)
 Group:		Applications/Databases
 Source0:	http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz
-# Source0-md5:	01dd611481594ea7afec60760808bf98
+# Source0-md5:	b7574c34e97fc07be1457dd47f5bc707
 Source1:	http://www.maxmind.com/download/geoip/database/LICENSE.txt
 # Source1-md5:	a1381bd1aa0a0c91dc31b3f1e847cf4a
 URL:		http://www.maxmind.com/app/geolitecountry
@@ -34,7 +34,7 @@ GeoIP jest biblioteką napisaną w C umożliwiającą użytkownikowi
 odnalezienie państwa, z którego pochodzi dany adres IP lub domena.
 Używa do tego zapisanej w pliku bazy danych (z marca 2003). W bazie
 tej adresy IP są kluczami, a państwa wartościami. Powinna ona być
-dokładniejsza niż sprawdzanie odwrotnego DNS. 
+dokładniejsza niż sprawdzanie odwrotnego DNS.
 
 GeoLite Country jest podobna do bazy danych GeoIP Country, ale nie
 jest tak dokładna. Jeśli wymagana jest większa dokładność, GeoIP
