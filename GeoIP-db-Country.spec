@@ -16,12 +16,6 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-GeoIP is a C library that enables the user to find the country that
-any IP address or hostname originates from. It uses a file based
-database that is accurate as of March 2003. This database simply
-contains IP blocks as keys, and countries as values. This database
-should be more complete and accurate than using reverse DNS lookups.
-
 GeoLite Country is similar to the GeoIP Country database, but is not
 as accurate. Should you require greater accuracy, GeoIP Country is a
 drop-in replacement for GeoLite Country.
@@ -30,12 +24,6 @@ License disclaimer: this product includes GeoLite data created by
 MaxMind, available from <http://www.maxmind.com/>.
 
 %description -l pl.UTF-8
-GeoIP jest biblioteką napisaną w C umożliwiającą użytkownikowi
-odnalezienie państwa, z którego pochodzi dany adres IP lub domena.
-Używa do tego zapisanej w pliku bazy danych (z marca 2003). W bazie
-tej adresy IP są kluczami, a państwa wartościami. Powinna ona być
-dokładniejsza niż sprawdzanie odwrotnego DNS.
-
 GeoLite Country jest podobna do bazy danych GeoIP Country, ale nie
 jest tak dokładna. Jeśli wymagana jest większa dokładność, GeoIP
 Country jest zamiennikiem GeoLite Country.
