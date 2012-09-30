@@ -38,7 +38,7 @@ cp -p %{SOURCE1} .
 
 gunzip GeoIP.dat.gz
 
-ver=$(stat -c '%y' GeoIP.dat | awk '{print $1}' | tr - .)
+ver=$(TZ=GMT stat -c '%y' GeoIP.dat | awk '{print $1}' | tr - .)
 if [ "$ver" != %{version} ]; then
 	exit 1
 fi
