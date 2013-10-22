@@ -11,7 +11,7 @@ Source0:	http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP
 Source1:	http://www.maxmind.com/download/geoip/database/LICENSE.txt
 # Source1-md5:	a1381bd1aa0a0c91dc31b3f1e847cf4a
 URL:		http://www.maxmind.com/app/geolitecountry
-Requires:	GeoIP-libs
+Requires:	GeoIP-libs >= 1.4.5-2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
