@@ -4,13 +4,11 @@ Name:		GeoIP-db-Country
 # Updated every month:
 Version:	2013.12.05
 Release:	1
-License:	OPEN DATA LICENSE (see LICENSE.txt)
+License:	CC 3.0 BY-SA
 Group:		Applications/Databases
 Source0:	http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz
 # Source0-md5:	b583e8f7299c5e8b739c58239c2c9bff
-Source1:	http://www.maxmind.com/download/geoip/database/LICENSE.txt
-# Source1-md5:	a1381bd1aa0a0c91dc31b3f1e847cf4a
-URL:		http://www.maxmind.com/app/geolitecountry
+URL:		http://dev.maxmind.com/geoip/legacy/geolite/
 Requires:	GeoIP-libs >= 1.4.5-2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -34,7 +32,6 @@ przez MaxWind, dostępne z <http://www.maxwind.com/>.
 %prep
 %setup -qcT
 cp -p %{SOURCE0} .
-cp -p %{SOURCE1} .
 
 gunzip GeoIP.dat.gz
 
@@ -53,5 +50,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.txt
 %{_datadir}/GeoIP/*.dat
