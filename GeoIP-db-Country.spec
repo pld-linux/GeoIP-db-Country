@@ -36,10 +36,14 @@ przez MaxWind, dostępne z <http://www.maxwind.com/>.
 cp -p %{SOURCE0} .
 cp -p %{SOURCE1} .
 
-gunzip GeoIP-%{version}.dat.gz
-gunzip GeoIPv6-%{version}.dat.gz
-
-ver=$(TZ=GMT stat -c '%y' GeoIP-%{version}.dat | awk '{print $1}' | tr - .)
+gzip -d GeoIP-%{version}.dat.gz GeoIPv6-%{version}.dat.gz
+dt4=$(TZ=GMT stat -c '%y' GeoIP-%{version}.dat | awk '{print $1}' | tr - .)
+dt5=$(TZ=GMT stat -c '%y' GeoIP-%{version}.dat | awk '{print $1}' | tr - .)
+if [ "$(echo $dt4 | tr -d .)" -gt "$(echo $dt6 | tr -d .)" ]; then
+	ver=$dt4
+else
+	ver=$dt6
+fi
 if [ "$ver" != %{version} ]; then
 	exit 1
 fi
