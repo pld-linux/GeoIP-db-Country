@@ -7,9 +7,9 @@ Release:	1
 License:	CC 3.0 BY-SA
 Group:		Applications/Databases
 Source0:	http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz?/GeoIP-%{version}.dat.gz
-# Source0-md5:	8c05085026366d19a3a5f954b70c2c8f
+# Source0-md5:	503e784eed8ee8e9d7ae6a4d92b5f0df
 Source1:	http://geolite.maxmind.com/download/geoip/database/GeoIPv6.dat.gz?/GeoIPv6-%{version}.dat.gz
-# Source1-md5:	81fa4944d9e714af51919fb84a637617
+# Source1-md5:	96de2c8ffb95c6bb2e19a0fe77337133
 URL:		http://dev.maxmind.com/geoip/legacy/geolite/
 Requires:	GeoIP-libs >= 1.4.5-2
 BuildArch:	noarch
