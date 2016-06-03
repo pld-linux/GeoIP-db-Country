@@ -29,7 +29,7 @@ jest tak dokładna. Jeśli wymagana jest większa dokładność, GeoIP
 Country jest zamiennikiem GeoLite Country.
 
 Informacja licencyjna: ten produkt zawiera dane GeoLite stworzone
-przez MaxWind, dostępne z <http://www.maxwind.com/>.
+przez MaxMind, dostępne z <http://www.maxmind.com/>.
 
 %prep
 %setup -qcT
