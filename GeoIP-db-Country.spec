@@ -6,11 +6,11 @@ Version:	2018.08.07
 Release:	1
 License:	CC 3.0 BY-SA
 Group:		Applications/Databases
-Source0:	http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz?/GeoIP-%{version}.dat.gz
+Source0:	https://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz?/GeoIP-%{version}.dat.gz
 # Source0-md5:	d538e57ad9268fdc7955c6cf9a37c4a9
-Source1:	http://geolite.maxmind.com/download/geoip/database/GeoIPv6.dat.gz?/GeoIPv6-%{version}.dat.gz
+Source1:	https://geolite.maxmind.com/download/geoip/database/GeoIPv6.dat.gz?/GeoIPv6-%{version}.dat.gz
 # Source1-md5:	f797eec3c3d33c456848f4a32215cd2f
-URL:		http://dev.maxmind.com/geoip/legacy/geolite/
+URL:		https://dev.maxmind.com/geoip/legacy/geolite/
 Requires:	GeoIP-libs >= 1.4.5-2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -38,7 +38,7 @@ cp -p %{SOURCE1} .
 
 gzip -d GeoIP-%{version}.dat.gz GeoIPv6-%{version}.dat.gz
 dt4=$(TZ=GMT stat -c '%y' GeoIP-%{version}.dat | awk '{print $1}' | tr - .)
-dt5=$(TZ=GMT stat -c '%y' GeoIP-%{version}.dat | awk '{print $1}' | tr - .)
+dt6=$(TZ=GMT stat -c '%y' GeoIPv6-%{version}.dat | awk '{print $1}' | tr - .)
 if [ "$(echo $dt4 | tr -d .)" -gt "$(echo $dt6 | tr -d .)" ]; then
 	ver=$dt4
 else
