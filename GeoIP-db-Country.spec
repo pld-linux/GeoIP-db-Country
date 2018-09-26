@@ -2,14 +2,14 @@ Summary:	GeoLite Country - Country database for GeoIP
 Summary(pl.UTF-8):	GeoLite Country - baza danych krajów dla GeoIP
 Name:		GeoIP-db-Country
 # Updated every month:
-Version:	2018.09.17
+Version:	2018.09.26
 Release:	1
 License:	CC 3.0 BY-SA
 Group:		Applications/Databases
 Source0:	https://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz?/GeoIP-%{version}.dat.gz
 # Source0-md5:	d538e57ad9268fdc7955c6cf9a37c4a9
 Source1:	https://geolite.maxmind.com/download/geoip/database/GeoIPv6.dat.gz?/GeoIPv6-%{version}.dat.gz
-# Source1-md5:	e1ffe84426d6eba087e6a5bbdbfe2977
+# Source1-md5:	e716a7841f7cf186e0d8d30b2382c7c7
 URL:		https://dev.maxmind.com/geoip/legacy/geolite/
 Requires:	GeoIP-libs >= 1.4.5-2
 BuildArch:	noarch
